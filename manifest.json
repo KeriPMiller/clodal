@@ -1,0 +1,25 @@
+{
+    "name": "Clodal",
+    "description": "Automatically close Datadog's Getting Started Modals",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab"
+    ],
+    "icons": {
+        "16": "doof.png",
+        "48": "doof.png",
+        "128": "doof.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.datadoghq.com/*"
+            ],
+            "run_at": "document_end",
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}
